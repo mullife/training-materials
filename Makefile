@@ -176,13 +176,7 @@ SYSDEV_4D_SLIDES = \
 		last-slides
 
 ANDROID_SLIDES = \
-		first-slides \
-		about-us \
-		course-information-title \
-		beagleboneblack-board \
 		android-course-outline \
-		course-information \
-		setup-lab \
 		android-introduction-title \
 		android-introduction-features \
 		android-introduction-history \
