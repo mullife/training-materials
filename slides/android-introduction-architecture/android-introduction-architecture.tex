@@ -20,13 +20,22 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Android Libraries}
+  \frametitle{Hardware Abstraction Layer (HAL)}
+  \begin{itemize}
+  \item The hardware abstraction layer (HAL) provides standard interfaces that expose device hardware capabilities to the higher-level Java API framework.
+  \item The HAL consists of multiple library modules, each of which implements an interface for a specific type of hardware component, such as the camera or bluetooth module.
+  \item When a framework API makes a call to access device hardware, the Android system loads the library module for that hardware component.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Native C/C++ Libraries}
   \begin{itemize}
   \item Gather a lot of Android-specific libraries to interact at a
     low-level with the system, but third-parties libraries as well
   \item Bionic is the C library, SurfaceManager is used for drawing
     surfaces on the screen, etc.
-  \item But also Blink, SQLite, OpenSSL coming from the free software
+  \item But also SQLite, BoringSSL coming from the free software
     world
   \end{itemize}
 \end{frame}
@@ -35,17 +44,17 @@
   \frametitle{Android Runtime}
   Handles the execution of Android applications
   \begin{itemize}
-  \item Almost entirely written from scratch by Google
-  \item Contains Dalvik, the virtual machine that executes every
+  \item Contains ART(Dalvik was used before Android 5.0), the virtual machine that executes every
     application that you run on Android, and the core library for the
-    Java runtime, coming from Apache Harmony project
+    Java runtime
+  \item Each app runs in its own process and with its own instance of the Android Runtime (ART)
   \item Also contains system daemons, init executable, basic binaries,
     etc.
   \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Android Framework}
+  \frametitle{JAVA API Framework}
   \begin{itemize}
   \item Provides an API for developers to create applications
   \item Exposes all the needed subsystems by providing an abstraction
@@ -55,7 +64,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Android Applications}
+  \frametitle{System Apps}
   \begin{itemize}
   \item AOSP also comes with a set of applications such as the phone
     application, a browser, a contact management application, an email
