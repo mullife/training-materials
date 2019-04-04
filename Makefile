@@ -182,13 +182,11 @@ ANDROID_SLIDES = \
 		android-introduction-history \
 		android-introduction-architecture \
 		android-introduction-hardware \
-		android-introduction-lab \
 		android-source-title \
 		android-source-obtaining \
 		android-source-organization \
 		android-source-compilation \
 		android-source-contribute \
-		android-source-lab \
 		sysdev-linux-intro-title \
 		sysdev-linux-intro-features \
 		sysdev-linux-intro-versioning \
@@ -220,7 +218,6 @@ ANDROID_SLIDES = \
 		android-adb-introduction \
 		android-adb-use \
 		android-adb-examples \
-		android-adb-lab \
 		android-fs-title \
 		sysdev-root-filesystem-principles \
 		initramfs \
@@ -244,24 +241,11 @@ ANDROID_SLIDES = \
 		android-native-layer-dalvik \
 		android-native-layer-hal \
 		android-native-layer-jni \
-		android-native-layer-lab-jni \
 		android-framework-title \
 		android-framework-native-services \
 		android-framework-ipc \
 		android-framework-java-services \
 		android-framework-extend \
-		android-framework-lab \
-		android-application-title \
-		android-application-basics \
-		android-application-activities \
-		android-application-services \
-		android-application-providers \
-		android-application-intents \
-		android-application-processes \
-		android-application-resources \
-		android-application-storage \
-		android-application-apk \
-		android-application-lab \
 		android-resources \
 		last-slides
 
