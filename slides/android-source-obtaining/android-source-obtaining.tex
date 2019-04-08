@@ -12,24 +12,8 @@
     Git repository would have been really slow
   \item Google split the source code into a one Git repository per
     component
-  \item You can easily browse these git repositories using
-    \url{https://code.google.com/p/android-source-browsing/source/browse/}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Source code licenses}
-  \begin{itemize}
-  \item Mostly two kind of licenses:
-    \begin{itemize}
-    \item GPL/LGPL Code: Linux
-    \item Apache/BSD: All the rest
-    \item In the \code{external} folder, it depends on the component
-    \end{itemize}
-  \item While you might expect Google's apps for Android, like the
-    Android Market (now called Google Play Store), to be in the AOSP
-    as well, these are actually proprietary and you need to be
-    approved by Google to get them.
+  \item You can easily browse these using
+    \url{http://androidxref.com/}
   \end{itemize}
 \end{frame}
 
@@ -46,6 +30,7 @@
     or \code{status} that are run across all the Git repositories
   \item You can also execute a shell command in each repository
     managed by Repo using the \code{repo forall} command
+	\code{Eg: repo forall -c "git checkout -b branch_name"}
   \end{itemize}
 \end{frame}
 
@@ -62,6 +47,7 @@
     between all the users, but you can add some local manifests.
   \item \code{repo} will also use any XML file that is under
     \code{.repo/local_manifests}
+  \code{Eg: repo init -m default_head.xml -u ssh://gerrit/platform/manifest -b  tpvision/AndroidO_2k16_mainline}
   \end{itemize}
 \end{frame}
 
@@ -70,14 +56,20 @@
 \begin{minted}[fontsize=\scriptsize]{xml}
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="github"
-          fetch="https://github.com/" />
 
-  <default remote="github" />
-
-  <project name="foo/bar" path="device/foo/bar" revision="v14.42" />
-
-  <remove-project name="foo/bar" />
+  <remote  name="origin"
+           fetch="ssh://url"
+           push="ssh://url"
+           review="http://172.16.112.71:8081/tpv-review/" />
+		   
+  <default revision="2k18_mtk_msaf_kane_n_devprod_EU_HTV"
+           remote="origin"
+           sync-j="4" />
+		   
+  <project name="tpv/device/tpv/build" path="android/n-base/device/tpv/build" />
+  <project name="tpv/device/tpv/ph7m_eu_5596" path="android/n-base/device/tpv/PH7M_EU_5596" revision="2k18_mtk_msaf_kane_n_devprod_ctv" />
+  <remove-project="tpv/apollo/tools" path="apollo/tools" />
+  
 </manifest>
 \end{minted}
 \end{frame}
