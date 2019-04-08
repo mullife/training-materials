@@ -193,7 +193,6 @@ ANDROID_SLIDES = \
 		sysdev-linux-intro-configuration \
 		sysdev-linux-intro-compilation \
 		sysdev-linux-intro-cross-compilation \
-		android-kernel-lab-compilation \
 		android-kernel-changes-title \
 		android-kernel-changes-wakelocks \
 		android-kernel-changes-binder \
