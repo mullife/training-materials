@@ -1,22 +1,5 @@
 \subsection{Wakelocks}
 \begin{frame}
-  \frametitle{Power management basics}
-  \begin{itemize}
-  \item Every CPU has a few states of power consumption, from being
-    almost completely off, to working at full capacity.
-  \item These different states are used by the Linux kernel to save
-    power when the system is run
-  \item For example, when the lid is closed on a laptop, it goes into
-    ``suspend'', which is the most power conservative mode of a
-    device, where almost nothing but the RAM is kept awake
-  \item While this is a good strategy for a laptop, it is not
-    necessarily good for mobile devices
-  \item For example, you don't want your music to be turned off when
-    the screen is
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
   \frametitle{Wakelocks}
   \begin{itemize}
   \item Android's answer to these power management constraints is wakelocks
